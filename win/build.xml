@@ -1,0 +1,18 @@
+<!-- we really should be using rake, but I don't have time to learn it -->
+<!-- this file is solely used to build a release zip file -->
+<project name='CardWallGenerator' default='package' basedir='.'>
+
+	<target name='package' description="packages the project for release">
+		<mkdir dir="../tmp"/>
+		<copy todir="../tmp">
+			<fileset dir="..">
+				<include name="**/**"/>
+				<exclude name="tmp/**"/>
+				<exclude name="*.zip"/>
+			</fileset>
+		</copy>
+		<zip destfile='../CardWallGenerator-0.5.zip' basedir='../tmp'/>
+		<delete dir="../tmp"/>
+	</target>
+
+</project>

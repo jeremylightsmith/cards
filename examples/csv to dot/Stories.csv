@@ -1,0 +1,16 @@
+Role,Task,Story,Note,Estimate
+Voter,Vote on question,Ability to see question,,1
+,,Ability to see choices,,1
+,,Ability to choose,This is the server trip,2
+,Navigate questions,Ability to continue to next / prev,,1
+,,Ability to see list of questions,This includes ability to jump to that question,4
+,Submit,Ability to return to new screen,,1
+Admin,Create questions,Ability to enter question,,4
+,,Ability to reorder question,,4
+,,Ability to enter multiple choice question,,1
+,,Ability to enter text question,,1
+,,Ability to enter long text question,,1
+,,Ability to enter list question,,2
+,Compile votes,Ability to see results in spreadsheet,,4
+,,Ability to see summary of results,This includes percentage of each question answering which answer,2
+,Announce winners,,,

@@ -1,0 +1,104 @@
+<html>
+<head>
+  <title>Card Wall Generator</title>
+</head>
+<body>
+<div align="center">
+<div style="width:800;" align="left">
+<h1>Card Wall Generator</h1>
+
+
+
+<h2>What is it?</h2>
+<hr/>
+
+<p>
+this tool will take an excel spreadsheet with a hierarchical story list in it, and generate
+a "card wall" in visio from it.
+</p>
+
+<p style="text-align:right">
+<img src="TPS-small.png"><br>
+<i>a "card wall"</i>
+</p>
+
+<p>
+the spreadsheet might look like - <a href="business processes.xls">business processes.xls</a>
+</p>
+
+<p>
+and the card wall might look like - <a href="TPS.vsd">TPS.vsd</a><br>
+</p>
+
+
+
+
+<h2>Installation</h2>
+<hr/>
+
+<h3>You will need:</h3>
+
+<ul>
+<li>Windows - sorry only works on windows right now...
+<li>Excel
+<li>Visio
+<li>Ruby - download it from here - <a href="http://rubyforge.org/projects/rubyinstaller/">http://rubyforge.org/projects/rubyinstaller/</a>
+</ul>
+
+<p>
+Once you have all those installed, you can test your installation by double clicking the
+"generate card walls.rb" file.  It should open excel for a second, then open up visio and
+generate 2 card walls.
+</p>
+
+<h3>The Driver File</h3>
+
+<p>
+What the card wall generator does is configured by the "generate card walls.rb" file.  Open
+it up and take a look.  You should see stuff like :
+</p>
+
+<code><pre>
+     data = load_excel_data 'Business Processes.xls', 1
+     create_visio_document data, 'Caution.vsd'
+</pre></code>
+
+<p>You can customize this for your needs.  Basically copy these 2 lines for every card wall
+you want to create, and substitute these for the values :
+<ul>
+<li>excel file with the master story list - "Business Processes.xls"
+<li>index of the sheet within the excel file - "1"
+<li>visio file that will be created - "Caution.vsd"
+</ul>
+</p>
+
+
+
+<h2>More Information</h2>
+<hr/>
+
+<p>Visit the project website at :</p>
+
+<p><a href="http://rubyforge.org/projects/cardwallgen">http://rubyforge.org/projects/cardwallgen</a></p>
+
+<p>The documentation is still pretty sparse.  If you can find someone that knows ruby, have them poke
+around, and they'll probably be able to figure out how to do most things.  Otherwise, email the list
+at cardwallgen-users@rubyforge.org, or sign up for the list at the project website.</p>
+
+
+
+
+<h2>License</h2>
+<hr/>
+
+<p>
+<i>Copyright (C) 2006 Jeremy Stell-Smith</i>
+</p>
+
+<p>
+This software is distributed under the LGPL license.
+</p>
+</div>
+</div>
+</body>
+</html>

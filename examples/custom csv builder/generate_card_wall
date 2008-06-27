@@ -1,0 +1,31 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+gem 'cards'
+require 'cards'
+include Cards
+
+
+def csv_file(name)
+  CsvParser.new(File.dirname(__FILE__) + "/#{name}.csv")
+end
+
+class Tracker < CsvBuilder
+  PRIORITY = %w(L M H)
+  
+  def header
+    ["Story", "Labels", "Story Type", "Estimate", "Description", "Priority"]
+  end
+
+  def add_story(name, row = {})
+    @csv << [
+              name,
+              "#{@task}, #{row[:priority]}",
+              nil,
+              row[:estimate],
+              "while #{@activity}\n#{row[:note]}",
+              PRIORITY.index(row[:priority])
+            ]
+  end
+end
+
+Tracker.from csv_file("Stories")

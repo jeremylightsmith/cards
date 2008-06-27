@@ -1,0 +1,34 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+gem 'cards'
+require 'cards'
+include Cards
+
+
+# this doesn't actually read the numbers document, you must export csv from numbers as we've done here, 
+# the csv can then be parsed and turned into omnigraffle
+
+def csv_file(name)
+  CsvParser.new(File.dirname(__FILE__) + "/Voting Example/Cards-#{name}.csv")
+end
+
+CardWall.colors[:goal] = :green
+CardWall.writer = GraffleWriter
+
+CardWall.from csv_file("Goals") do
+  column :goal
+end
+
+CardWall.from csv_file("Workflow") do
+  row :role
+  column :task, :wrap_at => 5
+end
+
+CardWall.from csv_file("Stories") do
+  row :activity
+  row :task
+  column :story, :wrap_at => 4 do |card, row|
+    card.name = "                                       #{row[:estimate]}\n\n#{card.name}" unless row[:estimate].blank?
+    card.name << "\n\n#{row[:note]}" unless row[:note].blank?    
+  end
+end

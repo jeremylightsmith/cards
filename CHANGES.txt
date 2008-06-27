@@ -1,0 +1,17 @@
+= Change Log
+
+== Version 0.8
+
+* example of custom csv builder
+
+== Version 0.7
+
+* fixing the dot writer
+* adding examples of csv -> dot and numbers -> omnigraffle
+
+== Version 0.6
+
+* moved main code to win/ subdirectory and moved mac branch to be main branch
+* total refactoring of the mac branch to support configurable dsls
+* releasing as a gem
+* changing name to cards

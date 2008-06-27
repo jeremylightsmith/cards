@@ -1,0 +1,39 @@
+We're currently using the tool for the CIT Enterprise Asset Management project.  Things we would like to see and/or retain:
+
+Keep the id's.  We use them to reference other artifacts.
+Add some automatic way to update all ids when inserting or deleting a row.
+Prevent some of the masking in lower cells from disappearing when we edit the text in a cell
+Retain 3x5 card size in the Visio output, at least as an option.
+
+Thanks.
+
+Greg S.
+
+Gregory Schalliol
+
+------
+
+1) do you use the "update" feature of the tool?  - we don't it doesn't work very well, and if no one else does, I was going to get rid of it
+
+>> No - didn't know there was one (must have missed it in the comprehensive documentation ;-)
+
+2) do you use id's in your stories?  - again, in a quickstart it's just noise, it was originally there so that we could update paper w/ cards, but I find it's easier to just mark up the paper w/ markers and post-its
+
+>> Yes - pleased keep this (or the option to turn it on / off), have found it very useful
+
+3) are you attached to the current size of the cards in visio?  - we changed them to 3" x 3" which is the size of small post its (at least here in the states)
+
+>> Not especially - but is there any chance we could have them configurable with some kind of sensible default?
+
+4) is there anything else that you'd love to see in the tool that's not already there?  - can't promise anything, but it'd be good to get a list of cool things to add to it
+
+>> GUI for driving it / integration with Windows explorer (How cool would it be to right click on the XLS and drive it from there? Schweet) (Personal prioritisation: Medium)
+>> Option to have it overwrite automatically and not throw a wobbly if the file already exists (Personal prioritisation: High)
+>> Configurable card size (as above) (Personal prioritisation: High)
+>> Ability to configure when the app wraps to the next column - at the moment you get 5 yellow / detail cards before it starts another column - it would be great to have a few more to handle large volumes (Personal prioritisation: Medium)
+>> Ability to add an overall title to the output (Personal prioritisation: High)
+>> Ability to add filename / version info to output (Personal prioritisation: Low)
+>> Ability to configure card colours / add different types (Personal prioritisation: Low)
+
+
+Luke Barrett

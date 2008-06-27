@@ -1,0 +1,29 @@
+Story,Labels,Story Type,Estimate,Description,Priority
+Ability to see question,"Vote on question, H",,1,"while Voter
+",2
+Ability to see choices,"Vote on question, M",,1,"while Voter
+",1
+Ability to choose,"Vote on question, H",,2,"while Voter
+This is the server trip",2
+Ability to continue to next / prev,"Navigate questions, H",,1,"while Voter
+",2
+Ability to see list of questions,"Navigate questions, H",,4,"while Voter
+This includes ability to jump to that question",2
+Ability to return to new screen,"Submit, M",,1,"while Voter
+",1
+Ability to enter question,"Create questions, H",,4,"while Admin
+",2
+Ability to reorder question,"Create questions, H",,4,"while Admin
+",2
+Ability to enter multiple choice question,"Create questions, L",,1,"while Admin
+",0
+Ability to enter text question,"Create questions, H",,1,"while Admin
+",2
+Ability to enter long text question,"Create questions, H",,1,"while Admin
+",2
+Ability to enter list question,"Create questions, L",,2,"while Admin
+",0
+Ability to see results in spreadsheet,"Compile votes, H",,4,"while Admin
+",2
+Ability to see summary of results,"Compile votes, M",,2,"while Admin
+This includes percentage of each question answering which answer",1

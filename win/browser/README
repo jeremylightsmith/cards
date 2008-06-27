@@ -1,0 +1,29 @@
+
+        Simple OLE Browser
+
+        Aug. 17, 2002 M.Suketa (masaki.suketa@nifty.ne.jp)
+
+Simple OLE Browser is OLE browser like OLE viewer or Object browser of
+Visual Basic Editor.
+
+[Requirement]
++ Ruby
+  http://www.ruby-lang.org/
+
++ swin and vruby
+  http://www.threeweb.ad.jp/~nyasu/vruby/
+
++ Win32OLE
+  http://homepage1.nifty.com/markey/ruby/win32ole/index_e.html
+
+[Copying]
+Simple OLE Browser is copyrighted free software by Masaki
+Suketa <masaki.suketa@nifty.ne.jp>. 
+You can redistribute it under the terms specified in the COPYING file
+of the Ruby distribution.
+
+[WARRANTY]
+  THIS SOFTWARE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR
+  IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED
+  WARRANTIES OF MERCHANTIBILITY AND FITNESS FOR A PARTICULAR
+  PURPOSE.

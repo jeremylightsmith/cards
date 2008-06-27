@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+gem 'cards'
+require 'cards'
+include Cards
+
+
+def csv_file(name)
+  CsvParser.new(File.dirname(__FILE__) + "/#{name}.csv")
+end
+
+CardWall.writer = DotWriter
+
+CardWall.from csv_file("Stories") do
+  row :role
+  row :task
+  column :story, :wrap_at => 4 do |card, row|
+    card.name << "\n\n#{row[:note]}" unless row[:note].blank?    
+    card.name << "\n\n#{row[:estimate]}" unless row[:estimate].blank?
+  end
+end
+puts "generated Stories.dot"
+
+# uncomment this line if you want to see the generated file
+# `open "#{File.dirname(__FILE__)}/Stories.dot"`

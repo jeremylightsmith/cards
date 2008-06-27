@@ -1,0 +1,40 @@
+CHANGES.txt
+Manifest.txt
+README.txt
+Rakefile
+examples/csv to dot/Stories.csv
+examples/csv to dot/Stories.dot
+examples/csv to dot/generate_card_walls
+examples/numbers to omnigraffle/Voting Example.numbers/Contents/PkgInfo
+examples/numbers to omnigraffle/Voting Example.numbers/QuickLook/Thumbnail.jpg
+examples/numbers to omnigraffle/Voting Example.numbers/document-thumbnail.tiff
+examples/numbers to omnigraffle/Voting Example.numbers/index.xml.gz
+examples/numbers to omnigraffle/Voting Example/Cards-Goals.csv
+examples/numbers to omnigraffle/Voting Example/Cards-Stories.csv
+examples/numbers to omnigraffle/Voting Example/Cards-Workflow.csv
+examples/numbers to omnigraffle/generate_card_walls
+lib/cards.rb
+lib/cards/builder.rb
+lib/cards/card.rb
+lib/cards/card_wall.rb
+lib/cards/csv_builder.rb
+lib/cards/csv_parser.rb
+lib/cards/extensions.rb
+lib/cards/layouts/column_layout.rb
+lib/cards/layouts/nil_layout.rb
+lib/cards/layouts/row_layout.rb
+lib/cards/master_story_list.rb
+lib/cards/swim_lanes.rb
+lib/cards/text.rb
+lib/cards/tracker_csv.rb
+lib/cards/writers/dot_writer.rb
+lib/cards/writers/graffle_writer.rb
+lib/cards/writers/text_writer.rb
+spec/cards/card_spec.rb
+spec/cards/card_wall_spec.rb
+spec/cards/csv_parser_spec.rb
+spec/cards/extensions_spec.rb
+spec/cards/swim_lanes_spec.rb
+spec/cards/writers/dot_writer_spec.rb
+spec/cards/writers/text_writer_spec.rb
+spec/spec_helper.rb
