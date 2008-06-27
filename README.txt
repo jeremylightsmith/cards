@@ -1,4 +1,4 @@
-= Project: CardWallGen
+= Project: Cards
 
 == Description
 
