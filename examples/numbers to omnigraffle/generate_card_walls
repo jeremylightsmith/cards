@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 require 'rubygems'
-require File.dirname(__FILE__) + "/../../lib/cards" # you probably want to include the gem version
+gem 'cards'
+require 'cards'
 require 'cards/numbers_parser'
 include Cards
 

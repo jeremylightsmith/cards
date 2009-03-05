@@ -11,12 +11,18 @@ require 'hoe'
 require 'lib/cards'
 
 desc "Default Task"
-task :default => [:spec]
+task :default => [:generate_manifest, :spec]
 
 task :test => :spec
 
 Spec::Rake::SpecTask.new(:spec) do |t|
   t.spec_files = FileList['spec/**/*_spec.rb']
+end
+
+task :generate_manifest do
+  File.open("Manifest.txt", "w") do |f|
+    f << FileList["CHANGES.txt", "Rakefile", "README.txt", "examples/**/*", "lib/**/*", "spec/**/*"].to_a.join("\n")
+  end
 end
 
 desc "export to dot file"
