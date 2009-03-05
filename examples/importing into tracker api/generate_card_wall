@@ -1,0 +1,32 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+require File.dirname(__FILE__) + "/../../lib/cards" # you probably want to include the gem version
+require 'rest_client'
+
+token = "d6b1b5ded944959aec78754ff9f018bd"
+project_id = "9989"
+priority = %w(L M H)
+
+project = RestClient::Resource.new("http://www.pivotaltracker.com/services/v2/projects/#{project_id}", 
+                                   :headers => { "X-TrackerToken" => token })
+
+# puts project["stories?filter=type:bug"].get
+
+csv = Cards::CsvParser.new(File.dirname(__FILE__) + "/Stories.csv")
+rows = csv.denormalized_rows(:story, [:activity, :task])
+rows = rows.sort_by {|row| priority.index(row[:priority])}
+
+rows.each do |row|
+  puts "adding #{row[:story]}"
+
+  params = {}
+  params[:name] = row[:story]
+  # params[:story_type] = "bug"
+  params[:current_state] = "unstarted"
+  params[:requested_by] = "Cards Test User"
+  params[:estimate] = row[:estimate]
+  params[:description] = "while #{row[:activity]}\n#{row[:note]}"
+
+  project["stories"].post(:story => params)
+end
+  

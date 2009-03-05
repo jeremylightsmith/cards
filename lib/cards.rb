@@ -15,5 +15,5 @@ require 'cards/master_story_list'
 require 'cards/tracker_csv'
 
 module Cards
-  VERSION = "0.8"
+  VERSION = "0.9"
 end

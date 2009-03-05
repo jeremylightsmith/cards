@@ -27,4 +27,20 @@ manage email,think about email,mow the lawn,1
     rows[4].to_h.should == {:task => 'read email', :estimate => "2"}
     rows[5].to_h.should == {:story => 'display email body', :estimate => "3"}
   end
+  
+  it "should denormalize rows" do
+    rows = CsvParser.new(sandbox['tmp.csv'].path).denormalized_rows(:story, [:activity, :task])
+    rows.size.should == 3
+    rows[0].should == {:activity => 'manage email', 
+                       :task => 'read email', 
+                       :story => 'display email body'}
+    rows[1].should == {:activity => 'manage email', 
+                       :task => 'think about email', 
+                       :story => 'mow the lawn', 
+                       :estimate => "1"}
+    rows[2].should == {:activity => 'manage email', 
+                       :task => 'read email', 
+                       :story => 'display email body',
+                       :estimate => '3'}
+  end
 end

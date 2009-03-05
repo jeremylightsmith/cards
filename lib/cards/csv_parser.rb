@@ -27,6 +27,34 @@ module Cards
       File.basename(@file).sub(/\..*/, '')
     end
     
+    # this method will turn something of the form
+    #
+    # activity | task    | story   |
+    # a        |         |         |
+    #          | b       |         |
+    #          |         | c       |
+    #          |         | d       |
+    #
+    # into 
+    #
+    # activity | task    | story   |
+    # a        | b       | c       |
+    # a        | b       | d       |
+    #
+    def denormalized_rows(key_column, columns_to_denormalize)
+      last_row = {}
+      rows = []
+      each_row do |row|
+        row = row.to_h
+        columns_to_denormalize.each do |c|
+          row[c] = last_row[c] if row[c].blank?
+        end
+        rows << row unless row[key_column].blank?
+        last_row = row
+      end
+      rows
+    end
+    
     private
 
     def define_header(header_row)
