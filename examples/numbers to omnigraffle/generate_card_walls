@@ -1,30 +1,26 @@
 #!/usr/bin/env ruby
-require 'rubygems'
-gem 'cards'
-require 'cards'
-require 'cards/numbers_parser'
-include Cards
+require File.dirname(__FILE__) + "/../../lib/cards"
 
 # this requires numbers '09, before that you must export to csv and use the csv parser
 
 def table(name)
   file = File.dirname(__FILE__) + "/Voting Example.numbers"
-  NumbersParser.new(file, name)
+  Cards::NumbersParser.new(file, name)
 end
 
-CardWall.colors[:goal] = :green
-CardWall.writer = GraffleWriter
+Cards::CardWall.colors[:goal] = :green
+Cards::CardWall.writer = Cards::GraffleWriter
 
-CardWall.from table("Goals") do
+Cards::CardWall.from table("Goals") do
   column :goal
 end
 
-CardWall.from table("Workflow") do
+Cards::CardWall.from table("Workflow") do
   row :role
   column :task, :wrap_at => 5
 end
 
-CardWall.from table("Stories") do
+Cards::CardWall.from table("Stories") do
   row :activity
   row :task
   column :story, :wrap_at => 4 do |card, row|

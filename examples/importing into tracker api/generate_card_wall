@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
-require 'rubygems'
 require File.dirname(__FILE__) + "/../../lib/cards" # you probably want to include the gem version
+gem 'rest-client', ">= 0.9"
 require 'rest_client'
 
 token = "d6b1b5ded944959aec78754ff9f018bd"

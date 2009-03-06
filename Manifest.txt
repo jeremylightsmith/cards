@@ -14,12 +14,8 @@ examples/excel to visio/generate card walls.rb
 examples/excel to visio/readme.html
 examples/excel to visio/TPS-small.png
 examples/importing into tracker api
-examples/importing into tracker api/appscript_example.rb
-examples/importing into tracker api/from_numbers_09
 examples/importing into tracker api/generate_card_wall
-examples/importing into tracker api/osa.rb
 examples/importing into tracker api/Stories.csv
-examples/importing into tracker api/Voting Example.numbers
 examples/numbers to omnigraffle
 examples/numbers to omnigraffle/generate_card_walls
 examples/numbers to omnigraffle/Voting Example.numbers

@@ -1,9 +1,3 @@
-require 'rubygems'
-gem 'rb-appscript'
-gem 'rubyosa'
-require 'appscript'
-require 'rbosa'
-
 module Cards
   class GraffleWriter
     CARD_WALL_STENCIL = File.expand_path(File.dirname(__FILE__) + "/CardWall.gstencil")
@@ -20,8 +14,8 @@ module Cards
     
     attr_reader :app
   
-    def initialize(name = "Card Wall")
-      @app = Appscript.app('OmniGraffle 4')
+    def initialize(name = "Card Wall", omnigraffle_app = "OmniGraffle 4")
+      @app = Appscript.app(omnigraffle_app)
       @doc = @app.documents[0]
       puts "opening #{name}"
       open_document(name)

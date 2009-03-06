@@ -1,4 +1,3 @@
-require 'rbosa'
 require 'cards/tabular_parser'
 
 module Cards
@@ -10,14 +9,14 @@ module Cards
     end
 
     def each_unparsed_row
-      numbers = OSA.app('Numbers')
+      numbers = Appscript.app('Numbers')
       document = numbers.open(@file)
       table = find_table(document, @table_name)
 
-      table.rows.each do |row|
+      table.rows.get.each do |row|
         values = []
-        row.cells.map do |cell|
-          value = cell.value
+        row.cells.get.map do |cell|
+          value = cell.value.get
           value = nil if value == 0
           values << value
         end
@@ -32,9 +31,9 @@ module Cards
     private
     
     def find_table(document, name)
-      document.sheets.each do |sheet|
-        sheet.tables.each do |table|
-          return table if table.name.downcase == name.downcase
+      document.sheets.get.each do |sheet|
+        sheet.tables.get.each do |table|
+          return table if table.name.get.downcase == name.downcase
         end
       end
       raise "table #{name} not found in #{document.name}"

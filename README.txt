@@ -35,10 +35,10 @@ that might look something like :
 
 == Contact
 
-Author::     Jeremy Stell-Smith
-Email::      jeremystellsmith@gmail.com
+Author::     Jeremy Lightsmith
+Email::      jeremy.lightsmith@gmail.com
 License::    LGPL License
 
 == Home Page
 
-http://rubyforge.org/projects/cardwallgen
+http://github.com/jeremylightsmith/cards
