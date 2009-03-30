@@ -1,8 +1,5 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
-require 'cards/card'
-require 'cards/layouts/row_layout'
-require 'cards/layouts/column_layout'
 include Cards
 
 module Cards
@@ -68,7 +65,7 @@ de"
   
   def new_card(name)
     c = Card.new(name)
-    c.layout = RowLayout.new
+    c.layout = Layouts::RowLayout.new
     c
   end
 end
@@ -77,8 +74,8 @@ describe Card, "column layout" do
   include Cards
   
   before do
-    a.layout = RowLayout.new
-    @layout = ColumnLayout.new
+    a.layout = Layouts::RowLayout.new
+    @layout = Layouts::ColumnLayout.new
   end
 
   it "should have 1 column" do
@@ -96,7 +93,7 @@ bcd
   
   it "should show with 2 rows and then columns" do
     a.add(b, c, d)
-    a.children.each {|child| child.layout = RowLayout.new}
+    a.children.each {|child| child.layout = Layouts::RowLayout.new}
     b.add(e, f, g)
     d.add(h)
     h.add(i, j)
@@ -112,7 +109,7 @@ efg h
   end
   
   it "should wrap" do
-    @layout = ColumnLayout.new(:wrap_at => 3)
+    @layout = Layouts::ColumnLayout.new(:wrap_at => 3)
     a.add(b, c, d)
     c.add(e, f, g, h, i, j, k)
     d.add(l, m)

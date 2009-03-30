@@ -1,3 +1,6 @@
+# this is making this a mac only distro, I'm afraid
+gem 'rb-appscript'
+require 'appscript'
 require 'cards/tabular_parser'
 
 module Cards

@@ -1,12 +1,9 @@
-$LOAD_PATH.unshift File.expand_path(File.dirname(__FILE__) + "/../lib")
+require File.dirname(__FILE__) + "/../lib/cards"
 
-require "rubygems"
 gem "rspec"
-gem "mocha"
 gem "file_sandbox"
 
-require 'cards/extensions'
-require 'cards/writers/text_writer'
+require 'cards/text_writer'
 
 Spec::Runner.configure do |config|
   #config.mock_with :mocha

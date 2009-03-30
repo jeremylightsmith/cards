@@ -1,5 +1,5 @@
 require File.dirname(__FILE__) + '/../spec_helper'
-require 'cards'
+require 'cards/numbers_parser'
 
 # not the best test, but it will do
 describe Cards::NumbersParser do

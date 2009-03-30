@@ -1,7 +1,5 @@
-require 'cards/builder'
-
 module Cards
-  class CardWall < Builder
+  class CardWall
     def define(&block)
       DefinitionContext.new(self).instance_eval(&block)
       self
@@ -34,7 +32,7 @@ module Cards
       @handlers = []
       @layouts = []
       @root = Card.new("root")
-      @root.layout = RowLayout.new
+      @root.layout = Layouts::RowLayout.new
       @root.y = -1
       @last_cards = [@root]
     end
@@ -76,13 +74,13 @@ module Cards
       end
       
       def row(name, *options)
-        @this.add_handler(name, RowLayout.new(*options)) do |name, row|
+        @this.add_handler(name, Layouts::RowLayout.new(*options)) do |name, row|
           Card.new(name)
         end
       end
       
       def column(name, *options)
-        @this.add_handler(name, ColumnLayout.new(*options)) do |name, row|
+        @this.add_handler(name, Layouts::ColumnLayout.new(*options)) do |name, row|
           c = Card.new(name)
           yield c, row if block_given?
           c

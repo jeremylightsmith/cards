@@ -1,5 +1,5 @@
-require File.dirname(__FILE__) + '/../../spec_helper'
-require 'cards/writers/dot_writer'
+require File.dirname(__FILE__) + '/../spec_helper'
+require 'cards/dot_writer'
 require 'stringio'
 include Cards
 

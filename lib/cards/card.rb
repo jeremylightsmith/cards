@@ -38,7 +38,7 @@ module Cards
     private
     
     def my_layout
-      @layout || NilLayout.new
+      @layout || Layouts::NilLayout.new
     end
   end
 end

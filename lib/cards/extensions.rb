@@ -1,8 +1,4 @@
 class String
-  def blank?
-    self.size == 0 || self.strip.size == 0
-  end
-
   def no_spaces
     self.gsub(' ', '\\ ')
   end
@@ -26,12 +22,6 @@ class String
 end
 
 class Array
-  def sum
-    s = 0
-    each {|i| s += i}
-    s
-  end
-  
   def widths
     map {|c| c.width}
   end
@@ -48,10 +38,6 @@ class Numeric
 end
 
 class Object
-  def blank?
-    nil?
-  end
-  
   def dump_methods(ignore = Object)
     ignore = ignore.instance_methods if ignore.is_a? Class
     p (methods - ignore).sort

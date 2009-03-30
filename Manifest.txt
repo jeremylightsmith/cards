@@ -20,12 +20,13 @@ examples/numbers to omnigraffle
 examples/numbers to omnigraffle/generate_card_walls
 examples/numbers to omnigraffle/Voting Example.numbers
 lib/cards
-lib/cards/builder.rb
 lib/cards/card.rb
 lib/cards/card_wall.rb
 lib/cards/csv_builder.rb
 lib/cards/csv_parser.rb
+lib/cards/dot_writer.rb
 lib/cards/extensions.rb
+lib/cards/graffle_writer.rb
 lib/cards/layouts
 lib/cards/layouts/column_layout.rb
 lib/cards/layouts/nil_layout.rb
@@ -35,22 +36,18 @@ lib/cards/numbers_parser.rb
 lib/cards/swim_lanes.rb
 lib/cards/tabular_parser.rb
 lib/cards/text.rb
+lib/cards/text_writer.rb
 lib/cards/tracker_csv.rb
-lib/cards/writers
-lib/cards/writers/dot_writer.rb
-lib/cards/writers/graffle_writer.rb
-lib/cards/writers/text_writer.rb
 lib/cards.rb
 spec/cards
 spec/cards/card_spec.rb
 spec/cards/card_wall_spec.rb
 spec/cards/csv_parser_spec.rb
+spec/cards/dot_writer_spec.rb
 spec/cards/extensions_spec.rb
 spec/cards/numbers_parser_spec.rb
 spec/cards/swim_lanes_spec.rb
-spec/cards/writers
-spec/cards/writers/dot_writer_spec.rb
-spec/cards/writers/text_writer_spec.rb
+spec/cards/text_writer_spec.rb
 spec/fixtures
 spec/fixtures/Voting Example.numbers
 spec/spec_helper.rb

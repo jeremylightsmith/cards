@@ -1,6 +1,5 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
-require 'cards/card_wall'
 include Cards
 
 describe CardWall, "row, col" do

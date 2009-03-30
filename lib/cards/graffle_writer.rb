@@ -1,3 +1,7 @@
+# this is making this a mac only distro, I'm afraid
+gem 'rb-appscript'
+require 'appscript'
+
 module Cards
   class GraffleWriter
     CARD_WALL_STENCIL = File.expand_path(File.dirname(__FILE__) + "/CardWall.gstencil")
