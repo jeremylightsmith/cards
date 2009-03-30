@@ -13,7 +13,7 @@ require 'cards/layouts/nil_layout'
 
 require 'cards/card'
 require 'cards/card_wall'
-require 'cards/writers/dot_writer'
+require 'cards/dot_writer'
 
 # csv builders
 require 'cards/csv_builder'

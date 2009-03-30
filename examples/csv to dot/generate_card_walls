@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 require 'rubygems'
-gem 'cards'
+$LOAD_PATH << File.dirname(__FILE__) + "/../../lib"
 require 'cards'
 include Cards
 

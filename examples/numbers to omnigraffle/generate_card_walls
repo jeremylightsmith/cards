@@ -1,5 +1,9 @@
 #!/usr/bin/env ruby
-require File.dirname(__FILE__) + "/../../lib/cards"
+require 'rubygems'
+$LOAD_PATH << File.dirname(__FILE__) + "/../../lib"
+require 'cards'
+require 'cards/numbers_parser'
+require 'cards/graffle_writer'
 
 # this requires numbers '09, before that you must export to csv and use the csv parser
 
