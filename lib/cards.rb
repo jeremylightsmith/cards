@@ -25,5 +25,5 @@ require 'cards/tracker_csv'
 #require 'cards/writers/graffle_writer'
 
 module Cards
-  VERSION = "0.9.1"
+  VERSION = "0.10"
 end

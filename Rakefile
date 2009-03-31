@@ -3,12 +3,17 @@ gem "rspec"
 gem "hoe"
 
 require 'rake/clean'
+require 'spec/rake/spectask'
 require 'hoe'
 
 require 'lib/cards'
 
+Spec::Rake::SpecTask.new(:spec) do |t|
+  t.spec_files = FileList['spec/**/*_spec.rb']
+end
+
 desc "Default Task"
-task :default => [:generate_manifest]
+task :default => [:spec, :generate_manifest]
 
 task :generate_manifest do
   File.open("Manifest.txt", "w") do |f|
